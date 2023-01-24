@@ -1,5 +1,4 @@
 ﻿
-
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
@@ -11,6 +10,8 @@ namespace Day24
         public static string Reg_pattern2 = "^[A-Z]{1}[A-Za-z]{2,}$";
         public static string Reg_pattern3 = "^(abc)(.[A-Za-z]+)*@(bl).(co)([.][a-z]{2,})?$";
         public static string Reg_pattern4 = "^[0-9]{2}\\s[0-9]{10}$";
+        public static string Reg_pattern5 = "^[a-zA-Z]{8,}([0-9]+)?$";
+
 
 
 
@@ -28,11 +29,16 @@ namespace Day24
             Console.WriteLine("Enter your Mobile Number: ");
             string Mobileno = Console.ReadLine();
             Console.WriteLine();
+            Console.WriteLine("Enter your Password: ");
+            string Password = Console.ReadLine();
+            Console.WriteLine();
 
             bool val1 = Regex.IsMatch(Firstname, Reg_pattern);
             bool val2 = Regex.IsMatch(Lastname, Reg_pattern2);
             bool val3 = Regex.IsMatch(Email, Reg_pattern3);
             bool val4 = Regex.IsMatch(Mobileno, Reg_pattern4);
+            bool val5 = Regex.IsMatch(Password, Reg_pattern5);
+
 
 
             if (val1)
@@ -63,9 +69,15 @@ namespace Day24
             }
             else
                 Console.WriteLine("pattern mobile number  is wrong");
+
+            if (val5)
+            {
+                Console.WriteLine("Pattern is correct for given password : {0}", Password);
+            }
+            else
+                Console.WriteLine("pattern password  is wrong");
         }
     }
 }
-
 
 
