@@ -1,5 +1,4 @@
 ﻿
-
 using System;
 using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
@@ -12,18 +11,18 @@ namespace Day24
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("enter your First  name");
+            Console.WriteLine("Enter your First Name: ");
             string name = Console.ReadLine();
             Console.WriteLine();
-            Console.WriteLine("enter your Last  name");
+            Console.WriteLine("Enter your Last Name: ");
             string lname = Console.ReadLine();
             Console.WriteLine();
 
-            Console.WriteLine("enter HOW many emails u want to validate");
+            Console.WriteLine("Enter How many Emails you want to validate");
             int n = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("enter your mail");
+                Console.WriteLine("Enter your Email: ");
                 string mail = Console.ReadLine();
                 demo d1 = new demo();
                 d1.validmail(mail);
@@ -31,10 +30,10 @@ namespace Day24
             Console.WriteLine();
 
 
-            Console.WriteLine("enter your mobile number");
+            Console.WriteLine("Emter your Mobile Number: ");
             string mb = Console.ReadLine();
             Console.WriteLine();
-            Console.WriteLine("enter your password ");
+            Console.WriteLine("Enter your Password: ");
             string pwd = Console.ReadLine();
             Console.WriteLine();
 
@@ -209,3 +208,5 @@ namespace Day24
         }
     }
 }
+
+
